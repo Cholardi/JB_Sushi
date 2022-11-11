@@ -10,19 +10,16 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <Navbar />
-                <Routes>
-                    {/* <Route path="/" element={<ItemListContainer/>}/>
-                    <Route path="/experiencias" element={<ItemListContainer/>}/>
-                    <Route path="/cart" element={<Cart/>}/>
-                    <Route path="/reservas" element={<ItemListContainer/>}/>
-                    <Route path="/quienes-somos" element={<ItemListContainer/>}/>
-                    <Route path="/contacto" element={<ItemListContainer/>}/> */}
-                </Routes>
             </header>
             <section>
-                <ItemListContainer greeting="Sushi de Autor 🍣 Eventos de Sushi" />
-                <ItemDetailContainer />
-                <Cart />
+                <Routes>
+                    <Route path="/" element={<ItemListContainer greeting="Sushi de Autor | 🍣 Eventos de Sushi" />} />
+                    <Route path="/category/:categoryId" element={<ItemListContainer />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/quienes-somos" element={<ItemListContainer />} />
+                    <Route path="/contacto" element={<ItemListContainer />} />
+                    <Route path="/item/:id" element={<ItemDetailContainer />} />
+                </Routes>
             </section>
         </div>
     );

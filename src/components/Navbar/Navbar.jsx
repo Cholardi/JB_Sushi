@@ -1,32 +1,47 @@
-import "./Navbar.css"
+import "./Navbar.css";
 import logo from "../../images/logo.jpg";
 import CartWidget from "../CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
     return (
         <nav className="navbar">
-            <a href="https://www.instagram.com/jb_sushi/" className="logo-container">
+            <NavLink to={"/"} className="logo-container">
                 <img src={logo} className="App-logo" alt="logo" />
-            </a>
+            </NavLink>
             <div className="menu">
                 <ul className="items-menu">
                     <li>
-                        <a href="" className="menu-item">INICIO</a>
+                        <NavLink to={"/"} className="menu-item">
+                            INICIO
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className="menu-item">EXPERIENCIAS</a>
+                        <NavLink to={"/category/traditional"} className="menu-item">
+                            EXPERIENCIAS TRADICIONALES
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className="menu-item">RESERVAS</a>
+                        <NavLink to={"/category/premium"} className="menu-item">
+                            EXPERIENCIAS PREMIUM
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className="menu-item">QUIÉNES SOMOS</a>
+                        <NavLink to={"/quienes-somos"} className="menu-item">
+                            QUIÉNES SOMOS
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="" className="menu-item">CONTACTO</a>
+                        <NavLink to={"/contacto"} className="menu-item">
+                            CONTACTO
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={"/cart"} className="menu-item">
+                            <CartWidget />
+                        </NavLink>
                     </li>
                 </ul>
-                <CartWidget />
             </div>
         </nav>
     );
