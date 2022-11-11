@@ -1,3 +1,5 @@
+import "./CartWidget.css"
+
 function CartWidget() {
     return (
         <a href="" className="cart-widget">

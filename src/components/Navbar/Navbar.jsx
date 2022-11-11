@@ -1,3 +1,4 @@
+import "./Navbar.css"
 import logo from "../../images/logo.jpg";
 import CartWidget from "../CartWidget/CartWidget";
 

@@ -1,0 +1,29 @@
+.item-count{
+    width: fit-content;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 20px;
+    color: #000000;
+}
+
+.item-count button{
+    border: none;
+    cursor: pointer;
+}
+
+.amount-modifier{
+    background: none;
+    font-size:x-large;
+}
+
+.add2cart-btn{
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #afafaf;
+    border-radius: 15px;
+}
+
+.amount{
+    font-size: x-large;
+    padding: 25px;
+}
