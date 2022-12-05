@@ -1,11 +1,12 @@
 .cart-item{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: start;
     background-color: rgb(227, 152, 12);
     margin: 20px;
     height: 300px;
+    width: 600px;
 }
 
 .cart-item-info{
@@ -43,6 +44,7 @@
 @media screen and (max-width: 768px) {
     .cart-item{
         height: fit-content;
+        width: fit-content;
         flex-direction: column;
     }
     .cart-item-info {

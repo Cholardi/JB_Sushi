@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import Swal from "sweetalert2";
 
 const CartContext = React.createContext();
 
@@ -34,8 +35,22 @@ const CartProvider = ({ children }) => {
         return cart.reduce((accumulator, product) => accumulator + product.amount, 0);
     };
 
+    const checkoutMessage = (id, items, total) => {Swal.fire({
+        title: "Reserva realizada exitosamente.",
+        html: `<div>
+                    <p>¡Gracias por tu compra!</p>
+                    <p>ID de la reserva: ${id}</p>
+                    <p>Productos: <br> ${items}</p>
+                    <p>Monto Total: $${total}</p>
+                </div>`,
+        color: "white",
+        icon: "success",
+        background: "#353535",
+        confirmButtonText: "Aceptar",
+    })};
+
     return (
-        <CartContext.Provider value={{ clearCart, isInCart, removeItemFromCart, addItemToCart, totalPrice, totalProductAmount, cart, processingCostFee }}>
+        <CartContext.Provider value={{ clearCart, isInCart, removeItemFromCart, addItemToCart, totalPrice, totalProductAmount, checkoutMessage, cart, processingCostFee }}>
             {children}
         </CartContext.Provider>
     );

@@ -39,6 +39,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Pre-requisites
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js > 16](https://nodejs.org) & npm.
+- [Sweetalert2](https://sweetalert2.github.io/) Library for modal boxes popups.
 
 ## Folder Structure
 - `src` : Folder that contains all the React app code with all the functionalities.
