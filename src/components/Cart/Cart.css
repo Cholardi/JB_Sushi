@@ -1,0 +1,19 @@
+.cart-items-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-price{
+    font-size: 2em;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .cart-items-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 30px;
+    }
+}

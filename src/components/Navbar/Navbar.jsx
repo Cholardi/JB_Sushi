@@ -1,5 +1,4 @@
 import "./Navbar.css";
-import logo from "../../images/logo.jpg";
 import CartWidget from "../CartWidget/CartWidget";
 import { NavLink } from "react-router-dom";
 
@@ -7,7 +6,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <NavLink to={"/"} className="logo-container">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={"https://i.imgur.com/g0XNtEc.png"} className="App-logo" alt="logo" />
             </NavLink>
             <div className="menu">
                 <ul className="items-menu">
@@ -17,12 +16,12 @@ function Navbar() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/category/traditional"} className="menu-item">
+                        <NavLink to={"/category/Tradicional"} className="menu-item">
                             EXPERIENCIAS TRADICIONALES
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/category/premium"} className="menu-item">
+                        <NavLink to={"/category/Premium"} className="menu-item">
                             EXPERIENCIAS PREMIUM
                         </NavLink>
                     </li>
@@ -36,12 +35,12 @@ function Navbar() {
                             CONTACTO
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to={"/cart"} className="menu-item">
-                            <CartWidget />
-                        </NavLink>
-                    </li>
                 </ul>
+                <div className="cart-widget-wrapper">
+                    <NavLink to={"/cart"} className="cart-widget-container">
+                        <CartWidget />
+                    </NavLink>
+                </div>
             </div>
         </nav>
     );
